@@ -1,3 +1,15 @@
+# IDES
+.vscode/
+*.vscode/
+*.code-workspace
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
