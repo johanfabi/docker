@@ -4,7 +4,7 @@ This is a simple example of how to use Docker with NGINX.
 
 ## How to use
 1. Clone this repository.
-2. Replace the `index.html` file with your own content.
+2. Replace the `src/index.html` file with your own content.
 3. Build the Docker image with the following command:
 ```bash
 docker build -t docker-nginx .
