@@ -12,6 +12,10 @@ docker build --build-arg PRODUCT=terraform --build-arg VERSION=1.7.4 -t docker-t
 ```bash
 docker run -it docker-terraform terraform -help
 ```
+4. If you want to run a Terraform module into the container, use de following command:
+```bash 
+docker run -it -w <workdir> docker-terraform <terraform command>
+```
 
 ## Terraform releases
 You can find all Terraform releases at [https://releases.hashicorp.com/terraform/](https://releases.hashicorp.com/terraform/).

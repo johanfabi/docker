@@ -4,7 +4,7 @@ FROM alpine:latest
 # Workdir
 WORKDIR /terraform
 
-# Copy Terraform  module
+# Copy Terraform module
 COPY ./src/main.tf /terraform/main.tf
 
 # Arguments for the build
