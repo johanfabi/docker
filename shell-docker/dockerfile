@@ -1,0 +1,16 @@
+# Use Ubuntu 20.04 LTS as base image
+FROM ubuntu:latest
+
+# Workdir
+WORKDIR /shell
+
+# Update OS and package list
+RUN apt-get update && apt-get install -y bash
+RUN apt-get install -y curl
+RUN apt-get install -y wget
+
+# Copy shell script to container
+COPY ./shell-scripts/* /shell/
+
+# Execute tail command to keep container running
+CMD ["tail", "-f", "/dev/null"]

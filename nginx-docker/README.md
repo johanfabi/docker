@@ -1,10 +1,13 @@
-# Docker NGINX
+# NGINX - Docker
 
 This is a simple example of how to use NGINX into Docker.
 
 ## How to use
+
 1. Clone this repository.
+
 2. Replace the `src/index.html` file with your own content.
+
 3. Build the Docker image with the following command:
 ```bash
 docker build -t docker-nginx .

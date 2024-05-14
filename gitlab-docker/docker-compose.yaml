@@ -1,0 +1,26 @@
+# This is a sample docker-compose.yaml with GitLab running on a default HTTP and SSH port.
+version: '3.6'
+services:
+  gitlab:
+    platform: linux/x86_64
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab
+    restart: always
+    hostname: 'gitlab.local.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        # Add any other gitlab.rb configuration here, each on its own line
+        external_url 'https://gitlab.local.com'
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
+
+volumes:
+  gitlab:
+    name: gitlab
