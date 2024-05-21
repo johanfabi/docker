@@ -3,11 +3,8 @@ This module fetches data from the PokeAPI and prints information about a specifi
 """
 
 import requests
-import os
 
-POKEMON = os.environ.get("POKEMON")
-
-URL = f"https://pokeapi.co/api/v2/pokemon/{POKEMON}"
+URL = "https://pokeapi.co/api/v2/pokemon/pikachu"
 
 response = requests.get(URL)
 
