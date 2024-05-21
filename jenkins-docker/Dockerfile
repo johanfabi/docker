@@ -4,9 +4,10 @@ FROM jenkins/jenkins:lts
 # Ejecutar Jenkins como root para instalar paquetes adicionales si es necesario
 USER root
 
-# Instalar Docker dentro del contenedor de Jenkins
-RUN apt-get update && \
-    apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+# Actualizar la lista de paquetes e instalar paquetes adicionales
+RUN apt-get update -y
+RUN apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+RUN apt-get install python3-pip -y
 
 # Cambiar de nuevo al usuario jenkins
 USER jenkins
