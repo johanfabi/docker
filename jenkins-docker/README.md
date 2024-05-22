@@ -27,5 +27,5 @@ http://localhost:8080
 
 5. Unlock Jenkins
 ```bash
-docker exec -it jenkins-docker_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword
+docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
